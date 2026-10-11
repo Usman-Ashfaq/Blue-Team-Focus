@@ -1,3 +1,4 @@
+// intializing express
 const express = require("express");
 const path = require("node:path");
 const crypto = require("node:crypto");
@@ -17,12 +18,12 @@ const mode = (process.env.SECURITY_MODE || "safe").toLowerCase();
 const host = process.env.HOST || "127.0.0.1";
 const port = Number(process.env.PORT || 3000);
 const csrfTokens = new Set();
-
+//for safe
 if (!["safe", "vulnerable"].includes(mode)) {
   console.error('SECURITY_MODE must be either "safe" or "vulnerable".');
   process.exit(1);
 }
-
+//for vulnerbale
 if (mode === "vulnerable" && host !== "127.0.0.1" && host !== "localhost") {
   console.error("Vulnerable mode may only bind to localhost.");
   process.exit(1);
