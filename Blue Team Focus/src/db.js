@@ -1,3 +1,4 @@
+// intializing
 const fs = require("node:fs");
 const path = require("node:path");
 const Database = require("better-sqlite3");
