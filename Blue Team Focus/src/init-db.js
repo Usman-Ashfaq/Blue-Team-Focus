@@ -6,6 +6,6 @@ const schemaPath = path.join(__dirname, "..", "db", "schema.sql");
 const schema = fs.readFileSync(schemaPath, "utf8");
 
 db.exec(schema);
-
+//showing on terminal 
 console.log("Database schema initialized.");
 db.close();
