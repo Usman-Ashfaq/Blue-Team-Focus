@@ -17,7 +17,7 @@ const insertCredential = db.prepare(`
   INSERT OR IGNORE INTO credentials (user_id, password_hash)
   VALUES (?, ?)
 `);
-
+//inserting new patient
 const insertPatient = db.prepare(`
   INSERT OR IGNORE INTO patients (patient_number, display_name, date_of_birth)
   VALUES (?, ?, ?)
