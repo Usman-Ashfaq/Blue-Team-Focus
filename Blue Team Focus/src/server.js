@@ -32,7 +32,7 @@ if (mode === "vulnerable" && host !== "127.0.0.1" && host !== "localhost") {
 function sanitizeHtml(value) {
   return DOMPurify.sanitize(String(value ?? ""));
 }
-
+//function to verify password
 function verifyPassword(password, storedHash) {
   if (!storedHash || typeof storedHash !== "string") return false;
   const sep = storedHash.indexOf(":");
