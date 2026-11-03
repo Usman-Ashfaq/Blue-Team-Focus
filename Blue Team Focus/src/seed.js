@@ -22,7 +22,7 @@ const insertPatient = db.prepare(`
   INSERT OR IGNORE INTO patients (patient_number, display_name, date_of_birth)
   VALUES (?, ?, ?)
 `);
-
+//new note from doctor
 const insertNote = db.prepare(`
   INSERT OR IGNORE INTO notes (id, patient_id, author_id, body)
   VALUES (?, ?, ?, ?)
