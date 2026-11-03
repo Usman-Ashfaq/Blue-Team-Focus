@@ -99,7 +99,7 @@ app.get("/api/notes", (_req, res) => {
     body: mode === "vulnerable" ? row.body : sanitizeHtml(row.body)
   })));
 });
-
+//putting some request to server
 app.post("/api/notes", (req, res) => {
   const noteText = String(req.body.text ?? "");
   const author = db.prepare("SELECT id FROM users WHERE username = ?").get("demo-clinician");
