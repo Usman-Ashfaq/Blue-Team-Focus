@@ -33,7 +33,7 @@ body {
   border-radius: 999px;
   font-weight: bold;
 }
-
+//deciding page layout
 .layout {
   display: grid;
   grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
