@@ -56,7 +56,7 @@ const seed = db.transaction(() => {
 });
 
 seed();
-
+//default username and password
 console.log("Synthetic demo records added.");
 console.log("Demo usernames: demo-admin, demo-clinician");
 console.log("Demo password: DemoPass!2026");
