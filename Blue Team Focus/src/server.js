@@ -257,7 +257,7 @@ app.get("/api/sql-advanced", (req, res) => {
   res.json({ mode, stage, table, sql, rows });
 });
 
-// ---------- Pages ----------
+// different pages
 app.get("/", (_req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
