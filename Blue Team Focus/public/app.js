@@ -21,7 +21,7 @@ async function loadMode() {
     csrfTokenInput.value = token.token;
   }
 }
-//loadign patients
+//loading patients
 async function loadPatients() {
   const patients = await fetchJson("/api/patients");
   patientList.innerHTML = patients.map((patient) => `
@@ -31,7 +31,7 @@ async function loadPatients() {
     </div>
   `).join("") || "<div class='list-item'>No patients found.</div>";
 }
-
+//loadign doctor notes
 async function loadNotes() {
   const notes = await fetchJson("/api/notes");
   notesList.innerHTML = notes.map((note) => `
