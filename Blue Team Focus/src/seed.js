@@ -7,12 +7,12 @@ function hashPassword(password) {
 
   return `${salt.toString("hex")}:${derivedKey.toString("hex")}`;
 }
-
+//entering new user
 const insertUser = db.prepare(`
   INSERT OR IGNORE INTO users (username, email, role)
   VALUES (?, ?, ?)
 `);
-
+//inserting user crendential
 const insertCredential = db.prepare(`
   INSERT OR IGNORE INTO credentials (user_id, password_hash)
   VALUES (?, ?)
