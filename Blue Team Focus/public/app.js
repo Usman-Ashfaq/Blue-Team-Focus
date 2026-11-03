@@ -1,3 +1,4 @@
+//intializing all required variables
 const modeBadge = document.getElementById("modeBadge");
 const loginStatus = document.getElementById("loginStatus");
 const patientList = document.getElementById("patientList");
@@ -20,7 +21,7 @@ async function loadMode() {
     csrfTokenInput.value = token.token;
   }
 }
-
+//loadign patients
 async function loadPatients() {
   const patients = await fetchJson("/api/patients");
   patientList.innerHTML = patients.map((patient) => `
